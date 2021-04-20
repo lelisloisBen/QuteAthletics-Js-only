@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Test</h1>
+
+    <button onclick="makeRandomColor()">color generator</button>
+
+    <div id="thediv"> 
+        <b>hello</b> 
+    </div>
+
+    <!-- <iframe src="https://livechat2021.herokuapp.com/" frameborder="0" width="50%" height="600px"></iframe>
+    
+    <script>
+        document.cookie = 'cross-site-cookie=bar; SameSite=None; Secure';
+    </script> -->
+
+    <script>
+        // Random Color Generator
+        function makeRandomColor(){
+            var c = '';
+            var colorTag = '';
+            
+            while (c.length < 6) {
+            c += (Math.random()).toString(16).substr(-6).substr(-1)
+            }
+            // return '#' + c;
+            colorTag = '#' + c;
+            console.log(colorTag);
+            // document.getElementById('thediv').style.backgroundColor = colorTag
+            document.getElementById("thediv").style.color=colorTag;
+        }
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-image: url("img/bg1.jpg"); /* The image used */
+            background-color: purple; /* Used if the image is unavailable */
+            height: 1000px; /* You must set a specified height */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: cover; /* Resize the background image to cover the entire container */
+        }
+        .liveVids {
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+        }
+        .contLive {
+            height: 600px;
+            background-image: url("img/bg.jpg");
+            background-color: black;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 20000;
+        }
+        .titleQA {
+            text-align: center;
+            color: white;
+            font-family: 'RocknRoll One', sans-serif;
+        }
+        .subTitleQA {
+            text-align: center;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Hello</h1>
+    <!-- <div class="skype-button bubble" data-contact-id="live:lelisois"></div>
+    <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script> -->
+ <!-- <a href="https://demo.w3layouts.com/demos_new/template_demo/17-05-2019/strength-demo_Free/75928776/web/index.html#contact">Fitness Website </a> -->
+
+ <div style="width: 50%">
+    <!-- <script id="782c26f0-aca7-d988-0425-cc5917ffd58b-live-ddf67d3a-1edb-3402-b460-8c0e7aba9a80" width="100%" height="100%" src="https://player.dacast.com/js/player.js?contentId=782c26f0-aca7-d988-0425-cc5917ffd58b-live-ddf67d3a-1edb-3402-b460-8c0e7aba9a80" class="dacast-video"></script> -->
+</div>
+
+<!-- <iframe src="https://iframe.dacast.com/live/782c26f0-aca7-d988-0425-cc5917ffd58b/ddf67d3a-1edb-3402-b460-8c0e7aba9a80" width="50%" height="50%" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe> -->
+
+<!-- <iframe src="https://iframe.dacast.com/live/782c26f0-aca7-d988-0425-cc5917ffd58b/1767844f-d1c2-5db6-fbe1-a3f637a79fac" width="50%" height="50%" frameborder="0" scrolling="no" allow="autoplay" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe> -->
+
+<iframe src="https://player.twitch.tv/?channel=quteathletics&parent=www.example.com" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+
+
+<div class="container contLive" >
+    <div onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
+        <img class="liveVids" src="img/bg.jpg" style="cursor:pointer" />
+    </div>
+    <div style="display:none">
+        <iframe src="https://player.twitch.tv/?channel=joltyawn&parent=localhost" class="liveVids" frameborder="0" allowfullscreen="true" scrolling="no"></iframe>
+    </div>
+</div>
+
+</body>
+</html>

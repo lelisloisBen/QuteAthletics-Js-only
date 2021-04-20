@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuteAthletics | Live</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
+<style>
+    body {
+        background-image: url("img/bg1.jpg");
+        background-color: purple;
+        height: 1000px; 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .liveVids {
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+    }
+    .contLive {
+        height: 600px;
+    }
+    .titleQA {
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        font-family: 'RocknRoll One', sans-serif;
+    }
+    .subTitleQA {
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+    .subTitleInfo {
+        text-align: center;
+        color: purple;
+        font-weight: bold;
+        background-color: blanchedalmond;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+    .imgLogo {
+        width: 100px;
+        height: 100px;
+    }
+    .blink {
+        animation: blink-animation 1s steps(5, start) infinite;
+        -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    }
+    @keyframes blink-animation {
+        to {
+            visibility: hidden;
+        }
+    }
+    @-webkit-keyframes blink-animation {
+        to {
+            visibility: hidden;
+        }
+    }
+</style>
+
+</head>
+<body>
+    
+    <div class="container text-center">
+        <h1 class="titleQA"><img class="imgLogo" src="img/QAlogo.png" alt="logo"> QuteAthletics</h1>
+        <h3 class="subTitleQA">
+            Live Workout <span id="timer"></span>
+        </h3> 
+        <h4 class="subTitleInfo">
+            Next Workout will be Friday, April 5, 2021 at 9:30 PM. 
+            <br>
+            Today's workout is HIIT Full Body abs, bring your towel we are going to get those abs right.
+            <br> 
+            Bring water for hydration and Yourself 
+            <img src="img/G1.gif" alt="G" width="100px" height="100px">
+            <br>
+        </h4>
+    </div>
+
+    <div class="container" >
+        <div class="row">
+            <div class="col-12 col-md-8 col-lg-8 contLive">
+                <iframe 
+                    src="https://player.twitch.tv/?channel=quteathletics&parent=quteathletics.com" 
+                    class="liveVids" 
+                    frameborder="0" 
+                    allowfullscreen="true" 
+                    scrolling="no"
+                ></iframe>            
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 contLive">
+                <!-- <iframe 
+                    src="https://www.twitch.tv/embed/quteathletics/chat?parent=quteathletics.com"
+                    class="liveVids"
+                >
+                </iframe> -->
+                <iframe src="https://livechat2021.herokuapp.com/" frameborder="0" class="liveVids"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Replays -->
+    <div class="container mt-5 p-3" style="background-color: black; border-radius: 5px;">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    
+                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                        <iframe 
+                            class="embed-responsive-item" 
+                            src="video/2021-03-26 21-35-11.mp4"
+                            allowfullscreen
+                        ></iframe>
+                        <p style="color: white;">Workout March 26 2021</p>
+                    </div>
+                                
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 mb-4">
+                    
+                    <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                        <iframe 
+                            class="embed-responsive-item" 
+                            src="video/2021-03-29 21-37-40.mp4"
+                            allowfullscreen
+                        ></iframe>
+                        <p style="color: white;">Workout March 29 2021</p>
+                    </div>
+                                
+                </div>
+            </div>
+    </div>
+
+<script>
+var countDownDate = new Date("Apr 5 2021 21:30:00").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById("timer").innerHTML = "starts in: " + days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  console.log(distance)
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "Live Now";
+    document.getElementById("timer").style.color = "red";
+    document.getElementById("timer").style.fontWeight = "bold";
+    document.getElementById("timer").classList.add('blink');
+  };
+  if (distance < -3650452) {
+    document.getElementById("timer").style.display = "none";
+  };
+}, 1000);
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>
